@@ -1,0 +1,63 @@
+.modalWrapper {
+  perspective: 1000px; /* 3D effect perspective */
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  position: fixed; /* Ensure it covers the whole viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+  z-index: 999; /* Make sure it's above other content */
+  
+ 
+}
+ 
+
+.card {
+  position: relative;
+  width: 420px;
+  height: 390px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  background: linear-gradient(120deg, #9891e4,beige);
+  border-radius: 15px;
+  margin:100px 350px;
+ 
+}
+
+.front, .back {
+  position: absolute;
+  width: 98%; /* Use full width of the card */
+  height: 98%; /* Use full height of the card */
+  backface-visibility: hidden;
+  /* padding: 20px; */
+  margin: 4px;
+  background: linear-gradient(120deg, rgb(13, 13, 13), #5e5e5f);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; 
+  
+}
+
+
+
+.front input,
+.back input {
+  width: 93%; 
+  margin-top: 20px;
+}
+
+.front button,
+.back button {
+  width: 100%; 
+}
+
+.flipped {
+  transform: rotateY(180deg); /* Flipping effect */
+}
+
+.back {
+  transform: rotateY(180deg); /* Back side rotation */
+}

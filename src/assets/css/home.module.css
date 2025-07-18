@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background-image: url('../home-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.overlay {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  color: antiquewhite;
+  margin:150px 0px ; 
+  
+}
+
+.overlay button{
+    background-color: rgb(121, 121, 107);
+    width: 150px;
+    margin: 70px 20px ;
+    color: rgb(254, 252, 252);
+    border: none;
+}
+
+.overlay button:hover{
+    background-color: rgb(175, 175, 156);
+   cursor: pointer;
+    color: rgb(254, 252, 252);
+    border: none;
+}
